@@ -181,7 +181,7 @@ vidList.addEventListener("click", (e) => {
 
 
 
-    let pop = document.createElement(".figure");
+    let pop = document.createElement("figure");
     pop.classList.add("pop");
 
     pop.innerHTML = `
