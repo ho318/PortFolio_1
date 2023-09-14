@@ -1,0 +1,569 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+
+    .panel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 1s;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &.on {
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+
+#image {
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+$size : 400px;
+
+.figure {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .letter {
+        width: 100%;
+        height: 100%;
+
+        h2 {
+            padding-top: 3%;
+            padding-left: 42%;
+            font: italic 50px/1 "anton";
+        }
+
+        span {
+            font: normal 30px/0.8 "맑은 고딕";
+            color: #aaa;
+            position: absolute;
+
+            &::before {
+                content: "/";
+                font-size: 50px;
+                margin-right: 20px;
+                margin-left: 40px;
+            }
+        }
+    }
+
+    .ADVERTISE {
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-top: calc(-1 * 400px / 2.5);
+        margin-left: calc(-1 * 400px / 2);
+
+        ul {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            // li의 공통 스타일
+            li {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: 1s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                    transition: 0.5s;
+                    transform: translateX(-100px) translateY(-50px);
+                }
+            }
+
+            // li의 개별 스타일
+            li {
+                &:nth-of-type(1) {
+                    opacity: 0;
+                    transform: translateX(-400px * 2.2) scale(0.5);
+                }
+
+                &:nth-of-type(2) {
+                    transform: translateX(-400px * 1.6) scale(0.6);
+                }
+
+                &:nth-of-type(3) {
+                    transform: translateX(-400px * 0.9) scale(0.8);
+                }
+
+                // 활성화 된 패널
+                &:nth-of-type(4) {
+                    width: 800px;
+                    opacity: 1;
+                    transform: translateX(-100px) scale(1);
+                    z-index: 3;
+                }
+
+                &:nth-of-type(5) {
+                    transform: translateX(400px * 0.8) scale(0.8);
+                    // z-index: 9;
+                }
+
+                &:nth-of-type(6) {
+                    transform: translateX(400px * 1.4) scale(0.6);
+                    z-index: -1;
+                }
+
+                &:nth-of-type(7) {
+                    opacity: 0;
+                    transform: translateX(400px * 1.9) scale(0.5);
+                }
+            }
+        }
+    }
+
+    .btns {
+        position: absolute;
+        bottom: 10vh;
+        right: 10vw;
+        display: flex;
+        gap: 50px;
+        transition: 0.5s;
+
+        div {
+            cursor: pointer;
+            width: 120px;
+            height: 36px;
+            border-radius: 18px;
+            background-color: #999;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: italic 22px/1 "anton";
+            color: #fff;
+            letter-spacing: 4px;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+
+        &.off {
+            right: 5vw;
+            opacity: 0;
+            z-index: -3;
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+    figure {
+        .btns {
+            width: 100%;
+            bottom: 6vh;
+            right: 0;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+
+.youtube {
+    margin-top: 50px;
+
+    .inner {
+        .vidList {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            article {
+                width: 48%;
+                height: 100%;
+                margin-bottom: 40px;
+
+                .pic {
+                    display: block;
+                    width: 100%;
+                    height: 60%;
+                    padding: 10px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border: 10px solid #000;
+                    }
+                }
+
+                .con {
+                    width: 100%;
+                    height: 40%;
+                    padding: 10px;
+
+                    h2 {
+                        font: bold 20px/1.2 "맑은 고딕";
+                        color: #444;
+                        margin-bottom: 15px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    width: 100%;
+    padding: 0 0 150px;
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        min-height: 500px;
+
+        h1 {
+            font: italic 50px/1 "Anton";
+            color: #000;
+            margin-bottom: 60px;
+            padding: 10px;
+
+            span {
+                font: normal 30px/0.8 "맑은 고딕";
+                color: #aaa;
+                position: absolute;
+                margin-bottom: 11px;
+
+                &::before {
+                    content: "/";
+                    font-size: 50px;
+                    margin-right: 20px;
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+.pop {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btnClose {
+        width: 46px;
+        height: 35px;
+        position: absolute;
+        bottom: 10px;
+        right: 5%;
+        color: #fff;
+        cursor: pointer;
+        border: 5px solid #000;
+        background-color: #333;
+        font-family: "ANTON";
+    }
+}
+
+.SNS {
+    padding: 150px 0px;
+    height: 1280px;
+
+    .SNS_header {
+        display: flex;
+        padding-bottom: 30px;
+        width: 90%;
+        margin: 0px auto;
+        max-width: 1280px;
+        place-content: center space-between;
+
+        h2 {
+            font: bold 40px/1 "Alfa Slab One";
+        }
+
+        .SNS_company {
+
+            display: flex;
+            place-content: center space-between;
+            gap: 20px;
+
+            .SNS_instagram {
+                .instagram {
+                    width: 130px;
+                    height: 40px;
+                    border-radius: 999px;
+                    border: none;
+                    font: italic 18px/1 "PartialSansKR-Regular";
+                    background-color: #bbb;
+                    color: #666;
+                    cursor: pointer;
+
+                    &.on {
+                        background-color: rgb(0, 101, 195);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .SNS_twitter {
+                .twitter {
+                    width: 130px;
+                    height: 40px;
+                    border-radius: 999px;
+                    border: none;
+                    font: italic 18px/1 "PartialSansKR-Regular";
+                    background-color: #bbb;
+                    color: #666;
+                    cursor: pointer;
+
+                    &.on {
+                        background-color: rgb(0, 101, 195);
+                        color: #fff;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .SNS_BODY {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0px auto;
+
+        .instagram {
+            display: flex;
+            width: 1280px;
+            height: 0;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px 70px;
+
+            a {
+                position: relative;
+
+                width: 20%;
+
+                img {
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 1 / 1;
+                    opacity: 0;
+                    transform: scale(0);
+                }
+            }
+
+            &.active {
+                a {
+                    img {
+                        opacity: 1;
+                        transform: scale(1);
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .twitter {
+            display: flex;
+            width: 1280px;
+            height: 0;
+            // height: 100%;
+            justify-content: space-between;
+            // align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px 70px;
+
+            a {
+                position: relative;
+                width: 20%;
+
+                img {
+                    display: none;
+                    width: 100%;
+                    // height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 1 / 1;
+                    opacity: 0;
+                    transform: scale(0);
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            &.active {
+                a {
+                    img {
+                        opacity: 1;
+                        transform: scale(1);
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:310px) {
+
+  // main
+    .main {
+        width: 310px;
+        height: 618px;
+        .panel {
+            li {
+
+                img {
+                    width: 310px;
+                    height: 618px;
+                    object-fit: cover;
+                }
+
+                &.on {
+                    opacity: 1;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    // ADVERTISE
+    .figure {
+        margin: 150px 0 300px 0;
+
+        .letter {
+            h2 {
+                padding-top: 0%;
+            }
+        }
+
+        .ADVERTISE {
+            width: 600px;
+            height: 600px;
+            top: 40%;
+            display: flex;
+            justify-content: center;
+
+            margin-top: calc(-1 * 400px / 2.5);
+            margin-left: calc(0px);
+
+            ul {
+
+                // li의 공통 스타일
+                li {
+                    img {
+                        transform: translateX(0px) translateY(0px);
+                    }
+                }
+
+                // li의 개별 스타일
+                li {
+
+                    &:nth-of-type(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-of-type(3) {
+                        opacity: 1;
+                        //    transform: translateX(-600px) scale(0.8);
+                    }
+
+                    // 활성화 된 패널
+                    &:nth-of-type(4) {
+                        width: 100%;
+                        transform: translateX(0px) scale(1);
+                        opacity: 1;
+                    }
+
+                    &:nth-of-type(5) {
+                        opacity: 1;
+                        // transform: translateX(-150px) scale(0.8);
+                    }
+
+                    &:nth-of-type(6) {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        .btns {
+            width: 100%;
+            right: 0;
+            bottom: -100px;
+            justify-content: space-evenly;
+
+            div {
+                width: 120px;
+                height: 36px;
+                border-radius: 18px;
+                background-color: #999;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font: italic 22px/1 "anton";
+                color: #fff;
+                letter-spacing: 4px;
+
+                &:hover {
+                    background-color: #555;
+                }
+            }
+
+            &.off {
+                right: 5vw;
+                opacity: 0;
+                z-index: -3;
+            }
+        }
+    }
+}

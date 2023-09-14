@@ -1,0 +1,837 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Frank+Ruhl+Libre:wght@700&family=Orbitron&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 10;
+}
+#header .inner {
+  width: 1652px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+#header .inner > h1 {
+  position: absolute;
+  width: 300px;
+  height: 120px;
+  margin-left: 60px;
+}
+#header .inner > h1 a img {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+#header .inner .Normal {
+  width: 100%;
+  height: 100%;
+}
+#header .inner .Normal ul {
+  width: 70%;
+  height: 100%;
+  right: 0px;
+  display: flex;
+  position: absolute;
+  padding: 0px 60px 0px 0px;
+  justify-content: right;
+  align-items: center;
+}
+#header .inner .Normal ul li {
+  display: flex;
+  margin-right: 60px;
+  font: bold 24px/1 "arial";
+}
+#header .inner .Normal ul li a {
+  position: relative;
+  display: block;
+  padding: 10px 0px;
+  color: #fff;
+}
+#header .inner .Normal ul li a:hover {
+  color: red;
+}
+#header .inner .Normal ul li a:hover::before {
+  transform: scaleX(100%);
+}
+#header .inner .Normal ul li a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  border-bottom: 3px solid #E91231;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  transform: scaleX(0%);
+}
+#header .inner .btnCall {
+  position: fixed;
+  right: 20px;
+  top: 5%;
+  transform: translateY(-50%);
+  display: none;
+  width: 20px;
+  height: 20px;
+  z-index: 15;
+}
+#header .inner .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .btnCall span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  transition: 1s;
+  text-indent: -9999px;
+}
+#header .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#header .inner .menuMo {
+  width: 270px;
+  height: 100vh;
+  background: #0A4C96;
+  position: fixed;
+  top: 0;
+  right: -340px;
+  padding: 40px 30px;
+  z-index: 11;
+  transition: 0.5s;
+}
+#header .inner .menuMo.on {
+  right: 0;
+}
+#header .inner .menuMo h1 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+#header .inner .menuMo h1 a img {
+  width: 100%;
+  object-fit: cover;
+}
+#header .inner .menuMo #gnbMo li a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+  font: bold 17px/1 "Frank Ruhl Libre";
+  color: #fff;
+  text-align: center;
+}
+#header .inner .menuMo #gnbMo li:hover {
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  background-color: #0d5fbb;
+}
+
+@media screen and (max-width: 310px) {
+  #header .inner > h1 {
+    margin-left: 0;
+  }
+  #header .inner > h1 a img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #header .inner .Normal {
+    display: none;
+  }
+  #header .inner .btnCall {
+    display: block;
+  }
+}
+#header_sub {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+#header_sub .inner {
+  width: 1652px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+#header_sub .inner h1 {
+  position: absolute;
+  width: 300px;
+  height: 120px;
+  margin-left: 60px;
+}
+#header_sub .inner h1 a img {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+#header_sub .inner nav ul {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0px 40px;
+}
+#header_sub .inner nav ul li {
+  margin-left: 100px;
+  font: bold 24px/1 "arial";
+}
+#header_sub .inner nav ul li a {
+  position: relative;
+  display: block;
+  padding: 10px 0px;
+  color: #fff;
+}
+#header_sub .inner nav ul li a:hover {
+  color: red;
+}
+#header_sub .inner nav ul li a:hover::before {
+  transform: scaleX(100%);
+}
+#header_sub .inner nav ul li a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  border-bottom: 3px solid #E91231;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  transform: scaleX(0%);
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+.main .panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.main .panel li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+}
+.main .panel li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main .panel li.on {
+  opacity: 1;
+  z-index: 2;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+}
+#image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.figure {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.figure .letter {
+  width: 100%;
+  height: 100%;
+}
+.figure .letter h2 {
+  padding-top: 3%;
+  padding-left: 42%;
+  font: italic 50px/1 "anton";
+}
+.figure .letter span {
+  font: normal 30px/0.8 "맑은 고딕";
+  color: #aaa;
+  position: absolute;
+}
+.figure .letter span::before {
+  content: "/";
+  font-size: 50px;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+.figure .ADVERTISE {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-top: -160px;
+  margin-left: -200px;
+}
+.figure .ADVERTISE ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.figure .ADVERTISE ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+.figure .ADVERTISE ul li img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.5s;
+  transform: translateX(-100px) translateY(-50px);
+}
+.figure .ADVERTISE ul li:nth-of-type(1) {
+  opacity: 0;
+  transform: translateX(-880px) scale(0.5);
+}
+.figure .ADVERTISE ul li:nth-of-type(2) {
+  transform: translateX(-640px) scale(0.6);
+}
+.figure .ADVERTISE ul li:nth-of-type(3) {
+  transform: translateX(-360px) scale(0.8);
+}
+.figure .ADVERTISE ul li:nth-of-type(4) {
+  width: 800px;
+  opacity: 1;
+  transform: translateX(-100px) scale(1);
+  z-index: 3;
+}
+.figure .ADVERTISE ul li:nth-of-type(5) {
+  transform: translateX(320px) scale(0.8);
+}
+.figure .ADVERTISE ul li:nth-of-type(6) {
+  transform: translateX(560px) scale(0.6);
+  z-index: -1;
+}
+.figure .ADVERTISE ul li:nth-of-type(7) {
+  opacity: 0;
+  transform: translateX(760px) scale(0.5);
+}
+.figure .btns {
+  position: absolute;
+  bottom: 10vh;
+  right: 10vw;
+  display: flex;
+  gap: 50px;
+  transition: 0.5s;
+}
+.figure .btns div {
+  cursor: pointer;
+  width: 120px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #999;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: italic 22px/1 "anton";
+  color: #fff;
+  letter-spacing: 4px;
+}
+.figure .btns div:hover {
+  background-color: #555;
+}
+.figure .btns.off {
+  right: 5vw;
+  opacity: 0;
+  z-index: -3;
+}
+
+@media screen and (max-width: 1199px) {
+  figure .btns {
+    width: 100%;
+    bottom: 6vh;
+    right: 0;
+    justify-content: space-evenly;
+  }
+}
+.youtube {
+  margin-top: 50px;
+}
+.youtube .inner .vidList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.youtube .inner .vidList article {
+  width: 48%;
+  height: 100%;
+  margin-bottom: 40px;
+}
+.youtube .inner .vidList article .pic {
+  display: block;
+  width: 100%;
+  height: 60%;
+  padding: 10px;
+}
+.youtube .inner .vidList article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 10px solid #000;
+}
+.youtube .inner .vidList article .con {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+}
+.youtube .inner .vidList article .con h2 {
+  font: bold 20px/1.2 "맑은 고딕";
+  color: #444;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  padding: 0 0 150px;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.content .inner h1 {
+  font: italic 50px/1 "Anton";
+  color: #000;
+  margin-bottom: 60px;
+  padding: 10px;
+}
+.content .inner h1 span {
+  font: normal 30px/0.8 "맑은 고딕";
+  color: #aaa;
+  position: absolute;
+  margin-bottom: 11px;
+}
+.content .inner h1 span::before {
+  content: "/";
+  font-size: 50px;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop .btnClose {
+  width: 46px;
+  height: 35px;
+  position: absolute;
+  bottom: 10px;
+  right: 5%;
+  color: #fff;
+  cursor: pointer;
+  border: 5px solid #000;
+  background-color: #333;
+  font-family: "ANTON";
+}
+
+.SNS {
+  padding: 150px 0px;
+  height: 1280px;
+}
+.SNS .SNS_header {
+  display: flex;
+  padding-bottom: 30px;
+  width: 90%;
+  margin: 0px auto;
+  max-width: 1280px;
+  place-content: center space-between;
+}
+.SNS .SNS_header h2 {
+  font: bold 40px/1 "Alfa Slab One";
+}
+.SNS .SNS_header .SNS_company {
+  display: flex;
+  place-content: center space-between;
+  gap: 20px;
+}
+.SNS .SNS_header .SNS_company .SNS_instagram .instagram {
+  width: 130px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  font: italic 18px/1 "PartialSansKR-Regular";
+  background-color: #bbb;
+  color: #666;
+  cursor: pointer;
+}
+.SNS .SNS_header .SNS_company .SNS_instagram .instagram.on {
+  background-color: rgb(0, 101, 195);
+  color: #fff;
+}
+.SNS .SNS_header .SNS_company .SNS_twitter .twitter {
+  width: 130px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  font: italic 18px/1 "PartialSansKR-Regular";
+  background-color: #bbb;
+  color: #666;
+  cursor: pointer;
+}
+.SNS .SNS_header .SNS_company .SNS_twitter .twitter.on {
+  background-color: rgb(0, 101, 195);
+  color: #fff;
+}
+.SNS .SNS_BODY {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0px auto;
+}
+.SNS .SNS_BODY .instagram {
+  display: flex;
+  width: 1280px;
+  height: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px 70px;
+}
+.SNS .SNS_BODY .instagram a {
+  position: relative;
+  width: 20%;
+}
+.SNS .SNS_BODY .instagram a img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  opacity: 0;
+  transform: scale(0);
+}
+.SNS .SNS_BODY .instagram.active a img {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+.SNS .SNS_BODY .twitter {
+  display: flex;
+  width: 1280px;
+  height: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 70px;
+}
+.SNS .SNS_BODY .twitter a {
+  position: relative;
+  width: 20%;
+}
+.SNS .SNS_BODY .twitter a img {
+  display: none;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  opacity: 0;
+  transform: scale(0);
+}
+.SNS .SNS_BODY .twitter::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.SNS .SNS_BODY .twitter.active a img {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+
+@media screen and (max-width: 310px) {
+  .main {
+    width: 310px;
+    height: 618px;
+  }
+  .main .panel li img {
+    width: 310px;
+    height: 618px;
+    object-fit: cover;
+  }
+  .main .panel li.on {
+    opacity: 1;
+    z-index: 2;
+  }
+  .figure {
+    margin: 150px 0 300px 0;
+  }
+  .figure .letter h2 {
+    padding-top: 0%;
+  }
+  .figure .ADVERTISE {
+    width: 600px;
+    height: 600px;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: -160px;
+    margin-left: 0px;
+  }
+  .figure .ADVERTISE ul li img {
+    transform: translateX(0px) translateY(0px);
+  }
+  .figure .ADVERTISE ul li:nth-of-type(2) {
+    opacity: 0;
+  }
+  .figure .ADVERTISE ul li:nth-of-type(3) {
+    opacity: 1;
+  }
+  .figure .ADVERTISE ul li:nth-of-type(4) {
+    width: 100%;
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
+  .figure .ADVERTISE ul li:nth-of-type(5) {
+    opacity: 1;
+  }
+  .figure .ADVERTISE ul li:nth-of-type(6) {
+    opacity: 0;
+  }
+  .figure .btns {
+    width: 100%;
+    right: 0;
+    bottom: -100px;
+    justify-content: space-evenly;
+  }
+  .figure .btns div {
+    width: 120px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #999;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: italic 22px/1 "anton";
+    color: #fff;
+    letter-spacing: 4px;
+  }
+  .figure .btns div:hover {
+    background-color: #555;
+  }
+  .figure .btns.off {
+    right: 5vw;
+    opacity: 0;
+    z-index: -3;
+  }
+}
+.main_sub {
+  width: 80%;
+  height: 60vh;
+  margin: 0 auto;
+}
+.main_sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 100px;
+  margin: 0 auto;
+  border: 5px solid #000;
+}
+
+.location {
+  width: 100%;
+}
+.location #map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+.location #map .markers {
+  width: 310px;
+}
+.location::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .traffic {
+  float: left;
+}
+.location .traffic li {
+  float: left;
+  margin-right: 20px;
+}
+.location .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  font: bold 12px/40px "맑은 고딕";
+  color: #333;
+  text-align: center;
+  border: 1px solid #555;
+}
+.location .traffic li.on a {
+  background-color: #555;
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+  padding: 0 0 150px;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.content .inner > h2 {
+  font: italic 50px/1 "anton";
+  color: #000;
+  margin: 100px 0px 20px;
+}
+
+#footer {
+  width: 100%;
+  padding: 100px 0;
+  background: #444;
+}
+#footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#footer .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer .inner .terms {
+  width: 100%;
+  display: flex;
+}
+#footer .inner .terms ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  margin: 10px 0px;
+}
+#footer .inner .terms ul li {
+  display: flex;
+}
+#footer .inner .terms ul li a {
+  font: bold 14px/1 "arial";
+  color: #fff;
+  margin-right: 20px;
+}
+#footer .inner .introduction {
+  float: left;
+  width: 100%;
+  font: 14px/1.3 "arial";
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #888;
+}
+#footer .inner .introduction ul {
+  display: flex;
+}
+#footer .inner .introduction ul li {
+  margin-right: 20px;
+}
+#footer .inner p {
+  width: 100%;
+  font: 12px/1 "arial";
+  color: #fff;
+}
+
+@font-face {
+  font-family: "PartialSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
