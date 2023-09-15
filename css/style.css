@@ -970,8 +970,8 @@ body {
   #footer .inner {
     width: 100%;
   }
-  #footer .inner .terms ul li {
-    display: flex;
+  #footer .inner .terms ul {
+    margin-left: 10%;
   }
   #footer .inner .introduction {
     width: 100%;
@@ -984,14 +984,14 @@ body {
   }
   #footer .inner .introduction ul {
     display: flex;
-  }
-  #footer .inner .introduction ul li {
-    margin-right: 20px;
+    flex-flow: column;
+    margin-left: 10%;
   }
   #footer .inner p {
     width: 100%;
     font: 12px/1 "arial";
     color: #fff;
+    margin-left: 10%;
   }
 }
 @font-face {
