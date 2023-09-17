@@ -1,3 +1,18 @@
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ header ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+const btnCall = document.querySelector(".btnCall");
+const menuMo = document.querySelector(".menuMo");
+
+btnCall.onclick = function(e){
+    e.preventDefault();
+
+    //  on이 있으면 제거, 없으면 추가
+    btnCall.classList.toggle("on");
+    menuMo.classList.toggle('on');
+}
+
+
+
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ API ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 //교통정보를 보게하는 버튼
 const t_on = document.querySelectorAll(".traffic li")[0];

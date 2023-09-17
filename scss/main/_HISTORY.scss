@@ -1,0 +1,117 @@
+.main_History {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 100px;
+
+  .panel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    li {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.History {
+  width: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .center {
+    width: auto;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    position: relative;
+
+    .imgText {
+      width: auto;
+      max-width: 100%;
+      background-color: #f6f6f6;
+      border-radius: 10px;
+      margin-top: 0;
+      margin-bottom: 29px;
+      margin-left: 5px;
+      padding: 30px;
+
+      .Pepsico {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+
+        div {
+          padding-bottom: inherit;
+          display: inline-block;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      p {
+        color: #383838;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-family: Noto Sans KR, sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.8em;
+
+        strong {
+          color: #151515;
+          font-weight: 700;
+        }
+
+        em {
+          color: #ea6d85;
+          font-weight: 600;
+        }
+      }
+
+      h4 {
+        color: #151515;
+        background-color: transparent;
+        border-radius: 30px;
+        margin-bottom: 15px;
+        margin-left: 0;
+        padding: 0 15px;
+        font-family: Noto Sans KR, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -59,7 +59,6 @@ function rolling() {
         num = 0;
     }
     active(num);
-    // progress();
 
 }
 
@@ -122,7 +121,7 @@ opens.forEach((el)=>{
 
 
 
-// ㅡㅡㅡㅡㅡㅡ youtube ㅡㅡㅡㅡㅡㅡㅡ
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ youtube ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 let vidList = document.querySelector(".vidList");
 let key = "AIzaSyB9y8GKf4q7lDT9EnFg9XUEkUFrJRwtG5U";
 let playListId = "PLWMGy4BUlHrz1h1CaC4xZtkMsD2pvUp8g";
@@ -204,7 +203,7 @@ vidList.addEventListener("click", (e) => {
 })
 
 
-// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  SNS ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  SNS ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 const btns_SNS = document.querySelectorAll(".SNS_company div button");
 const boxes = document.querySelectorAll(".SNS_BODY div");
