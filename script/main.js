@@ -26,7 +26,7 @@ startRolling();
 
 
 
-// 1. 롤링 시작기능
+// 롤링 시작기능
 function startRolling () {
 
     active(num);
@@ -39,7 +39,7 @@ function startRolling () {
 }
 
 
-// 3. on클래스로인한 활성화 기능
+// on클래스로인한 활성화 기능
 function active (index) {
     // 클릭을 하는 순간 모든 panel과 btns들에 on을 일시적으로 지우고,
     // 클릭한 인덱스에 해당하는 panels인덱스와 btns인덱스에만 on을 붙인다.
@@ -50,7 +50,7 @@ function active (index) {
     // 전역변수num을 갱신하도록 한다.
 } 
 
-// 3-1 싱크를 맞추는 롤링함수
+// 싱크를 맞추는 롤링함수
 function rolling() {
     // 여기에서 전역변수num의 값과 len의 값을 비교해서 순환시켜준다.
     if(num < len) {
@@ -67,8 +67,8 @@ function rolling() {
 const banner_ul = document.querySelector(".ADVERTISE ul");
 const banners = banner_ul.children;
 const lis = banner_ul.querySelectorAll("li")
-console.log(banners); //HTMLCollection(7)
-console.log(lis); //NodeList(7)
+console.log(banners);
+console.log(lis);
 let count = 3;
 
 
@@ -157,9 +157,7 @@ fetch(url)
         vidList.innerHTML = result;
     })
 
-// const vid = vidList.querySelector("article").querySelector("a");
-// console.log(vid);
-// 괄호 밖인 여기서는 a태그에 이벤트를 부여할 수가 없는 상황
+
 
 // 그래서 이벤트 위임을 사용해서 a태그에 이벤트를 적용할거임
 //a태그인 썸네일을 클릭하면 비디오가 팝업되서 보이게
