@@ -2,12 +2,12 @@
 const btnCall = document.querySelector(".btnCall");
 const menuMo = document.querySelector(".menuMo");
 
-btnCall.onclick = function(e){
-    e.preventDefault();
+btnCall.addEventListener("click", (e) => {
+  e.preventDefault();
 
-    btnCall.classList.toggle("on");
-    menuMo.classList.toggle('on');
-}
+  btnCall.classList.toggle("on");
+  menuMo.classList.toggle("on");
+});
 
 
 
